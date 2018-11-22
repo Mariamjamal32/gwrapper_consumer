@@ -1,0 +1,24 @@
+<html>
+<body>
+  <h2>Pull Requests</h2>
+  </<br>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>URL</th>
+    </tr>
+    {% for pr in prs%}
+      {% for key, value in pr.items() %}
+       <tr>
+           <th> {{ key }} </th>
+           <td> {{ value }} </td>
+       </tr>
+      {% endfor %}
+    <!-- <tr>
+      <td>{{pr.title}}</td>
+      <td>{{pr.url}}</td>
+    </tr> -->
+    {% endfor %}
+  </table>
+</body>
+</html>
