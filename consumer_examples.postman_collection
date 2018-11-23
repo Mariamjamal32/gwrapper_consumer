@@ -1,0 +1,151 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Gwrapper Consumer Examples",
+		"_postman_id": "8eb242c6-ae6d-0a56-d72b-4661a31da9ec",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetPRsByCommitCount",
+			"request": {
+				"url": "http://127.0.0.1:5000/prcommitcount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filter\": \"lt\",\n\t\"count\": 2,\n\t\"state\": \"open\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPRsByChangedFileCount [state=closed]",
+			"request": {
+				"url": "http://127.0.0.1:5000/prfilecount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filter\":\"gt\",\n\t\"count\":2,\n\t\"state\":\"closed\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPRsByChangedFilesCount [state='open']",
+			"request": {
+				"url": "http://127.0.0.1:5000/prfilecount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filter\":\"gt\",\n\t\"count\":2,\n\t\"state\":\"open\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPRsByCommitMsgText [filter = 'any']",
+			"request": {
+				"url": "http://127.0.0.1:5000/prcommittext",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filter\": \"any\",\n\t\"search_text\": \"['Update','Fix']\",\n\t\"state\": \"closed\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPRsByCommitMsgText [filter = 'all'] ",
+			"request": {
+				"url": "http://127.0.0.1:5000/prcommittext",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filter\": \"all\",\n\t\"search_text\": \"['Update','Fix']\",\n\t\"state\": \"closed\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPRsByChangedFileName [filter = 'all'] ",
+			"request": {
+				"url": "http://127.0.0.1:5000/prfilename",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filter\": \"all\",\n\t\"search_text\": \"['.gitignore', 'build.ps1']\",\n\t\"state\":\"closed\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPRsByChangedFileName [filter = 'any']",
+			"request": {
+				"url": "http://127.0.0.1:5000/prfilename",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filter\": \"any\",\n\t\"search_text\": \"['.gitignore', 'green', 'build.ps1']\",\n\t\"state\":\"closed\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
