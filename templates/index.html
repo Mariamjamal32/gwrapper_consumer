@@ -1,24 +1,19 @@
 <html>
-<body>
-  <h2>Pull Requests</h2>
-  </<br>
-  <table>
-    <tr>
-      <th>Title</th>
-      <th>URL</th>
+  <body>
+    <h2>Pull Requests</h2>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>URL</th>
     </tr>
-    {% for pr in prs%}
-      {% for key, value in pr.items() %}
-       <tr>
-           <th> {{ key }} </th>
-           <td> {{ value }} </td>
-       </tr>
+{% for pr in prs%}
+{% for key, value in pr.items() %}
+<tr>
+  <th> {{ key }} </th>
+  <td> {{ value }} </td>
+</tr>
+{% endfor %}
       {% endfor %}
-    <!-- <tr>
-      <td>{{pr.title}}</td>
-      <td>{{pr.url}}</td>
-    </tr> -->
-    {% endfor %}
-  </table>
-</body>
+    </table>
+  </body>
 </html>
