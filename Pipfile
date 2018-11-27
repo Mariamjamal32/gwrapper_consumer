@@ -5,10 +5,10 @@ name = "pypi"
 
 [dev-packages]
 
+
 [requires]
-python_version = "3.7"
+flask = "*"
+fastjsonschema = "*"
+prfilterutility = "*"
 
 [packages]
-flask = "*"
-jsonify = "*"
-prfilterutility = {version = "*", index = "https://test.pypi.org/simple/"}

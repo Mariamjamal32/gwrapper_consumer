@@ -5,14 +5,15 @@
       <tr>
         <th>Title</th>
         <th>URL</th>
-    </tr>
-{% for pr in prs%}
-{% for key, value in pr.items() %}
-<tr>
-  <th> {{ key }} </th>
-  <td> {{ value }} </td>
-</tr>
-{% endfor %}
+      </tr>
+      {% for pr in prs%}
+        {% for key, value in pr.items() %}
+         <tr>
+             <th> {{ key }} </th>
+             <td> {{ value }} </td>
+         </tr>
+        {% endfor %}
+    
       {% endfor %}
     </table>
   </body>
