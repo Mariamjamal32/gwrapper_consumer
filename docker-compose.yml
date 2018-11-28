@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  web:
+    image: wrapper_child_app_docker_setup
+    ports:
+      - "5000:5000"
