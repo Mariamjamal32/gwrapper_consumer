@@ -1,7 +1,7 @@
 # Use an official Python runtime as a parent image
 FROM python:3.5
 
-ARG BRANCH=oakbani/master-replica
+ARG BRANCH=master
 
 # Set the working directory to /app
 WORKDIR /app
@@ -15,9 +15,6 @@ RUN python setup.py install
 
 # Make port 5000 available to the world outside this container
 EXPOSE 5000
-
-# Define environment variable
-ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "consumer.py"]
