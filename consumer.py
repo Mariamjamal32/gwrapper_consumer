@@ -4,7 +4,6 @@ from flask import request
 from gwrapper import logger_interface
 from gwrapper import wrapper
 import json
-import pdb
 
 app = Flask(__name__)
 
